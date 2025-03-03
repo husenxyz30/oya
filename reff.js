@@ -19,13 +19,13 @@ async function createEmail() {
 
     await axios.post('https://api.mail.tm/accounts', { address: email, password: password }, {
         headers: {
-            'User -Agent': userAgent,
+            'User-Agent': userAgent,
             'Content-Type': 'application/json'
         }
     });
     const loginRes = await axios.post('https://api.mail.tm/token', { address: email, password: password }, {
         headers: {
-            'User -Agent': userAgent,
+            'User-Agent': userAgent,
             'Content-Type': 'application/json'
         }
     });
