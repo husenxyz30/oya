@@ -1,6 +1,6 @@
 const axios = require('axios');
 const readline = require('readline');
-const randomUser agent = require('random-useragent');
+const randomUseragent = require('random-useragent');
 
 const rl = readline.createInterface({
     input: process.stdin,
