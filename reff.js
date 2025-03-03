@@ -43,7 +43,7 @@ async function getOTP(email) {
         const response = await axios.get('https://api.mail.tm/messages', {
             headers: {
                 'Authorization': `Bearer ${authToken}`,
-                'User -Agent': userAgent
+                'User-Agent': userAgent
             }
         });
         const messages = response.data['hydra:member'];
@@ -52,7 +52,7 @@ async function getOTP(email) {
                 const mailDetail = await axios.get(`https://api.mail.tm/messages/${msg.id}`, {
                     headers: {
                         'Authorization': `Bearer ${authToken}`,
-                        'User -Agent': userAgent
+                        'User-Agent': userAgent
                     }
                 });
                 const otpMatch = mailDetail.data.text.match(/\b\d{6}\b/);
@@ -72,7 +72,7 @@ async function registerOyaChat(email, referralCode) {
         referral_code: referralCode
     }, {
         headers: {
-            'User -Agent': userAgent,
+            'User-Agent': userAgent,
             'Content-Type': 'application/json'
         }
     });
@@ -94,7 +94,7 @@ async function registerOyaChat(email, referralCode) {
             otp: otp
         }, {
             headers: {
-                'User -Agent': userAgent,
+                'User-Agent': userAgent,
                 'Content-Type': 'application/json'
             }
         });
