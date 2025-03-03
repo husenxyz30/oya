@@ -37,7 +37,7 @@ async function createEmail() {
 
 async function getOTP(email) {
     console.log("⌛ Menunggu kode OTP...");
-    const userAgent = randomUser agent.getRandom();
+    const userAgent = randomUseragent.getRandom();
     for (let i = 0; i < 30; i++) {
         await delay(5000);
         const response = await axios.get('https://api.mail.tm/messages', {
@@ -64,7 +64,7 @@ async function getOTP(email) {
 }
 
 async function registerOyaChat(email, referralCode) {
-    const userAgent = randomUser agent.getRandom();
+    const userAgent = randomUseragent.getRandom();
     
     // Menggunakan API untuk mendaftar
     const response = await axios.post(`https://oyachat.com/api/register`, {
