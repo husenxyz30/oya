@@ -15,7 +15,7 @@ async function createEmail() {
     const domain = 'edny.net';
     const email = `user${Math.random().toString(36).substring(7)}@${domain}`;
     const password = "password123";
-    const userAgent = randomUser agent.getRandom();
+    const userAgent = randomUseragent.getRandom();
 
     await axios.post('https://api.mail.tm/accounts', { address: email, password: password }, {
         headers: {
